@@ -1,0 +1,26 @@
+
+
+10) personaliza la pagina de error
+    crear una pagina not-found.jsx an la carpeta app.
+    se puede controlar los rutas dinamicas con un if
+    if(parseInt(params.id) > 100){
+        notFound()
+    }
+11) Colocación de archivos los archivos o paginas que esten dentro de las carpetas 
+    no son accesible desde el navegador
+
+12) Carpetas y Rutas privadas agregar un piso antes del nombre de la carpeta
+    _lib 
+
+13) Grupos de rutas crear una carpeta en app  si agregas (auth) los parentesis
+        auth
+            login
+                page.jsx
+            registro
+                page.jsx
+            olvide-clave
+                page.jsx
+14) layout
+
+15) layout por Anidados
+16) - Route Group Layout
