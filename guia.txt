@@ -1,4 +1,49 @@
+1) npx create-next-app . // probar con npm run dev
+2) npm install bootstrap@5.3.3
+3) crear las carpetas components y libs dentro de src
+    
+    limpiar globals.css y page.modules.css
+    actualizar src/app/layout.js "en por es",  "title"
+    limpiar page.js con rafce "hola mundo"
 
+    configurar el css bootstrap
+    -- agregar en el archivo src/layout.jsx antes de import "./globals.css";
+    -- import 'bootstrap/dist/css/bootstrap.min.css';
+        listo el css de bootstrap
+        congigurar fondo y text en el src/app/layout.js
+            <body className={`bg-dark text-white-50 ${inter.className}`}>{children}</body>
+    
+    configurar el js de bootstrap
+    -- crear BootstrapClient.jsx dentro de la carpeta components con este codigo
+            
+            "use client"
+            import { useEffect } from "react"
+            function BootstrapClient() {
+                useEffect(() => {
+                    require('bootstrap/dist/js/bootstrap.bundle.min.js')
+                }, [])
+                return null
+            }
+            export default BootstrapClient
+
+    --- importar el componente dentro de src/layout.jsx antes de export const metadata = {
+            import BootstrapClient from "../components/BootstrapClient";
+
+    --- agregar en el layout.jsx antes del </body>
+            <BootstrapClient/>
+
+---------------------------------------------------------------------------
+
+4) crear los componentes Header.jsx y Footer.jsx con el contenido base de bootstrap
+    agregar el Header y el Footer
+    <body className={`bg-dark text-white-50 ${inter.className}`}>
+        <Header />
+          {children}
+        <Footer />
+        <BootstrapClient/>
+      </body>
+
+------------------------------
 
 10) personaliza la pagina de error
     crear una pagina not-found.jsx an la carpeta app.
